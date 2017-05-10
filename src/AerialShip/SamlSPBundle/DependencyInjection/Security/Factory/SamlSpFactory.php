@@ -59,7 +59,7 @@ class SamlSpFactory extends AbstractFactory
                                     ->children()
                                         ->scalarNode('entity_id')->cannotBeEmpty()->isRequired()->end()
                                         ->scalarNode('base_url')->defaultValue(null)->end()
-                                        ->booleanNode('want_assertions_signed')->cannotBeEmpty()->defaultFalse()->end()
+                                        ->booleanNode('want_assertions_signed')->defaultFalse()->end()
                                     ->end()
                                 ->end()
                                 ->arrayNode('signing')->addDefaultsIfNotSet()
